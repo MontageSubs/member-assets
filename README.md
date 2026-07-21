@@ -25,7 +25,8 @@
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-e886faeb8c33/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-e886faeb8c33) | RiderLty | `e886faeb8c33` | [查看](members/e886faeb8c33) | [RiderLty](https://github.com/RiderLty) |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-b49fabfb496d/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-b49fabfb496d) | Ariel | `b49fabfb496d` | [查看](members/b49fabfb496d) | [arielherself](https://github.com/arielherself) |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-a0b47f1933b0/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-a0b47f1933b0) | Balding | `a0b47f1933b0` | [查看](members/a0b47f1933b0) | [BaldingXYZ](https://github.com/BaldingXYZ) |
-| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-9e87d020efd5/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-9e87d020efd5) | Ke | `9e87d020efd5` | [查看](members/9e87d020efd5) | — |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-9e87d020efd5/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-9e87d020efd5) | Ke | `9e87d020efd5` | [查看](members/9e87d020efd5) | — |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-9fa086be0389/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-9fa086be0389) | Hypnotism | `9fa086be0389` | [查看](members/9fa086be0389) | [SmokedCherries](https://github.com/SmokedCherries) |
 <!-- members:end -->
 
 ---
