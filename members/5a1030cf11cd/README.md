@@ -18,13 +18,20 @@ Specialties · 特长（自定义字段，可自行修改标题 · customizable 
 
 -->
 
-<table><tr><td valign="top"><a href="https://github.com/Sydiuan" title="GitHub profile"><img src="https://github.com/MontageSubs/member-assets/releases/download/v1-5a1030cf11cd/circle-96.png" width="96" alt="Avatar of 十三"></a></td><td valign="top" style="padding-left:20px;">
 
-# 十三
 
-No bio yet · 暂无简介
+<!-- profile:Do not edit code block below this line · 请勿编辑下方代码块 -->
+<table><tr><td valign="top"><a href="https://github.com/Sydiuan" title="GitHub profile"><img src="https://github.com/MontageSubs/member-assets/releases/download/v1-5a1030cf11cd/circle-96.png" width="96" alt="Avatar of 十三"></a><div style="text-align:center; margin-top:10px;">
+<a href="https://github.com/MontageSubs/member-assets/upload/v1/members/5a1030cf11cd/avatar">添加自定义头像</a><br>
+<a href="https://github.com/MontageSubs/member-assets/tree/v1/members/5a1030cf11cd/avatar">查看自定义头像</a>
+</div></td><td valign="top" style="padding-left:20px;">
 
-<table><tr><th align="center">GitHub</th><th align="center">Avatar Release · 头像</th><th align="center">Member ID · 用户ID</th></tr><tr><td align="center"><a href="https://github.com/Sydiuan" title="GitHub profile"><b>GitHub</b></a></td><td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-5a1030cf11cd" title="Avatar release page"><b>View · 查看</b></a></td><td align="center"><code>5a1030cf11cd</code></td></tr></table></td></tr></table>
+# 十三  
+No bio yet · 暂无简介  
+<table><tr><th align="center">头像</th><th align="center">GitHub</th><th align="center">成员ID</th></tr><tr><td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-5a1030cf11cd" title="Avatar release page"><b>持久链接</b></a></td><td align="center"><a href="https://github.com/Sydiuan" title="GitHub profile"><b>GitHub</b></a></td><td align="center"><code>5a1030cf11cd</code></td></tr></table></td></tr></table>
+<!-- profile:Do not edit code block above this line · 请勿编辑上方代码块 -->
+
+
 
 <!-- profile:community_contributions:start -->
 ## 社区贡献
@@ -48,6 +55,10 @@ No bio yet · 暂无简介
 
 <!-- profile:achievements:end -->
 
+
+
+
+
 ---
 <!-- profile:Do not edit content below this line · 请勿编辑下方内容 -->
 <div align="center">
@@ -67,5 +78,5 @@ type: member
 created_at: '2026-07-21T11:34:48Z'
 bio: ''
 specialties: ''
-template_version: '2'
+template_version: '3'
 -->

@@ -18,13 +18,20 @@ Specialties · 特长（自定义字段，可自行修改标题 · customizable 
 
 -->
 
-<table><tr><td valign="top"><a href="https://github.com/SmokedCherries" title="GitHub profile"><img src="https://github.com/MontageSubs/member-assets/releases/download/v1-9fa086be0389/circle-96.png" width="96" alt="Avatar of Hypnotism"></a></td><td valign="top" style="padding-left:20px;">
 
-# Hypnotism
 
-No bio yet · 暂无简介
+<!-- profile:Do not edit code block below this line · 请勿编辑下方代码块 -->
+<table><tr><td valign="top"><a href="https://github.com/SmokedCherries" title="GitHub profile"><img src="https://github.com/MontageSubs/member-assets/releases/download/v1-9fa086be0389/circle-96.png" width="96" alt="Avatar of Hypnotism"></a><div style="text-align:center; margin-top:10px;">
+<a href="https://github.com/MontageSubs/member-assets/upload/v1/members/9fa086be0389/avatar">添加自定义头像</a><br>
+<a href="https://github.com/MontageSubs/member-assets/tree/v1/members/9fa086be0389/avatar">查看自定义头像</a>
+</div></td><td valign="top" style="padding-left:20px;">
 
-<table><tr><th align="center">GitHub</th><th align="center">Avatar Release · 头像</th><th align="center">Member ID · 用户ID</th></tr><tr><td align="center"><a href="https://github.com/SmokedCherries" title="GitHub profile"><b>GitHub</b></a></td><td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-9fa086be0389" title="Avatar release page"><b>View · 查看</b></a></td><td align="center"><code>9fa086be0389</code></td></tr></table></td></tr></table>
+# Hypnotism  
+No bio yet · 暂无简介  
+<table><tr><th align="center">头像</th><th align="center">GitHub</th><th align="center">成员ID</th></tr><tr><td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-9fa086be0389" title="Avatar release page"><b>持久链接</b></a></td><td align="center"><a href="https://github.com/SmokedCherries" title="GitHub profile"><b>GitHub</b></a></td><td align="center"><code>9fa086be0389</code></td></tr></table></td></tr></table>
+<!-- profile:Do not edit code block above this line · 请勿编辑上方代码块 -->
+
+
 
 <!-- profile:community_contributions:start -->
 ## 社区贡献
@@ -48,6 +55,10 @@ No bio yet · 暂无简介
 
 <!-- profile:achievements:end -->
 
+
+
+
+
 ---
 <!-- profile:Do not edit content below this line · 请勿编辑下方内容 -->
 <div align="center">
@@ -67,5 +78,5 @@ type: member
 created_at: '2026-07-21T12:07:49Z'
 bio: ''
 specialties: ''
-template_version: '2'
+template_version: '3'
 -->
