@@ -21,16 +21,8 @@ OLD_GITHUB_HREF = re.compile(
 SECTION_PATTERN = re.compile(r"<!-- profile:(\w+):start -->(.*?)<!-- profile:\1:end -->", re.S)
 
 
-def _preserved_contributions(sections):
-    parts = []
-    for key in ("community_contributions", "external_contributions"):
-        if key in sections:
-            parts.append(f"<!-- profile:{key}:start -->\n{sections[key]}\n<!-- profile:{key}:end -->")
-    return "\n\n".join(parts)
-
-
-def _honors_body(sections):
-    raw = sections.get("honors", "（暂无）")
+def _section_body(sections, key, default=""):
+    raw = sections.get(key, default)
     lines = raw.strip().splitlines()
     return "\n".join(lines[1:]).strip() if lines and lines[0].startswith("##") else raw.strip()
 
@@ -65,8 +57,9 @@ def migrate(readme_path):
         frontmatter,
         bio=frontmatter["bio"],
         specialties=frontmatter["specialties"],
-        contributions_block=_preserved_contributions(sections),
-        honors_body=_honors_body(sections),
+        community_contributions=_section_body(sections, "community_contributions"),
+        external_contributions=_section_body(sections, "external_contributions"),
+        honors_body=_section_body(sections, "honors", "（暂无）"),
     )
     readme_path.write_text(new_text, encoding="utf-8")
     return True
