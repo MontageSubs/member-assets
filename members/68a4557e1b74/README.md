@@ -20,16 +20,15 @@ Specialties · 特长（自定义字段，可自行修改标题 · customizable 
 
 
 
+
 <!-- profile:Do not edit code block below this line · 请勿编辑下方代码块 -->
-<table><tr><td valign="top"><a href="https://github.com/mtsubs" title="GitHub profile"><img src="https://github.com/MontageSubs/member-assets/releases/download/v1-68a4557e1b74/circle-96.png" width="96" alt="Avatar of 小p"></a><div style="text-align:center; margin-top:10px;">
-<a href="https://github.com/MontageSubs/member-assets/upload/v1/members/68a4557e1b74/avatar">添加自定义头像</a><br>
-<a href="https://github.com/MontageSubs/member-assets/tree/v1/members/68a4557e1b74/avatar">查看自定义头像</a>
-</div></td><td valign="top" style="padding-left:20px;">
+<table><tr><td valign="top"><a href="https://github.com/mtsubs" title="GitHub profile"><img src="https://github.com/MontageSubs/member-assets/releases/download/v1-68a4557e1b74/circle-96.png" width="96" alt="Avatar of 小p"></a></td><td valign="top" style="padding-left:20px;">
 
 # 小p  
 热爱电影，喜欢猫猫，钻研翻译  
-翻译、轻量的编码<table><tr><th align="center">头像</th><th align="center">GitHub</th><th align="center">成员ID</th></tr><tr><td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-68a4557e1b74" title="Avatar release page"><b>持久链接</b></a></td><td align="center"><a href="https://github.com/mtsubs" title="GitHub profile"><b>GitHub</b></a></td><td align="center"><code>68a4557e1b74</code></td></tr></table></td></tr></table>
+翻译、轻量的编码<table><tr><th align="center">头像</th><th align="center">GitHub</th><th align="center">成员ID</th></tr><tr><td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-68a4557e1b74" title="Avatar release page"><b>持久链接</b></a></td><td align="center"><a href="https://github.com/mtsubs" title="GitHub profile"><b>GitHub</b></a></td><td align="center"><code>68a4557e1b74</code></td></tr></table></td></tr></table><sub><a href="https://github.com/MontageSubs/member-assets/upload/v1/members/68a4557e1b74/avatar">添加自定义头像</a> · <a href="https://github.com/MontageSubs/member-assets/tree/v1/members/68a4557e1b74/avatar">查看自定义头像</a></sub>
 <!-- profile:Do not edit code block above this line · 请勿编辑上方代码块 -->
+
 
 
 
@@ -78,5 +77,5 @@ type: member
 created_at: '2026-07-21T10:59:13Z'
 bio: 热爱电影，喜欢猫猫，钻研翻译
 specialties: 翻译、轻量的编码
-template_version: '3.1'
+template_version: '3.2'
 -->

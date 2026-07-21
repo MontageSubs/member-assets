@@ -20,16 +20,15 @@ Specialties · 特长（自定义字段，可自行修改标题 · customizable 
 
 
 
+
 <!-- profile:Do not edit code block below this line · 请勿编辑下方代码块 -->
-<table><tr><td valign="top"><a href="https://github.com/BaldingXYZ" title="GitHub profile"><img src="https://github.com/MontageSubs/member-assets/releases/download/v1-a0b47f1933b0/circle-96.png" width="96" alt="Avatar of Balding"></a><div style="text-align:center; margin-top:10px;">
-<a href="https://github.com/MontageSubs/member-assets/upload/v1/members/a0b47f1933b0/avatar">添加自定义头像</a><br>
-<a href="https://github.com/MontageSubs/member-assets/tree/v1/members/a0b47f1933b0/avatar">查看自定义头像</a>
-</div></td><td valign="top" style="padding-left:20px;">
+<table><tr><td valign="top"><a href="https://github.com/BaldingXYZ" title="GitHub profile"><img src="https://github.com/MontageSubs/member-assets/releases/download/v1-a0b47f1933b0/circle-96.png" width="96" alt="Avatar of Balding"></a></td><td valign="top" style="padding-left:20px;">
 
 # Balding  
 暂无简介  
-<table><tr><th align="center">头像</th><th align="center">GitHub</th><th align="center">成员ID</th></tr><tr><td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-a0b47f1933b0" title="Avatar release page"><b>持久链接</b></a></td><td align="center"><a href="https://github.com/BaldingXYZ" title="GitHub profile"><b>GitHub</b></a></td><td align="center"><code>a0b47f1933b0</code></td></tr></table></td></tr></table>
+<table><tr><th align="center">头像</th><th align="center">GitHub</th><th align="center">成员ID</th></tr><tr><td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-a0b47f1933b0" title="Avatar release page"><b>持久链接</b></a></td><td align="center"><a href="https://github.com/BaldingXYZ" title="GitHub profile"><b>GitHub</b></a></td><td align="center"><code>a0b47f1933b0</code></td></tr></table></td></tr></table><sub><a href="https://github.com/MontageSubs/member-assets/upload/v1/members/a0b47f1933b0/avatar">添加自定义头像</a> · <a href="https://github.com/MontageSubs/member-assets/tree/v1/members/a0b47f1933b0/avatar">查看自定义头像</a></sub>
 <!-- profile:Do not edit code block above this line · 请勿编辑上方代码块 -->
+
 
 
 
@@ -78,5 +77,5 @@ type: member
 created_at: '2026-07-21T12:03:46Z'
 bio: ''
 specialties: ''
-template_version: '3.1'
+template_version: '3.2'
 -->
