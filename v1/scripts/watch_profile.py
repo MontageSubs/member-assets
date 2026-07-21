@@ -12,7 +12,7 @@ from profile_common import (
     existing_profiles,
     render_readme,
 )
-from create_profile import build_readme, normalize_github
+from profile_renderer import build_readme, normalize_github
 
 INPUT_PATTERN = re.compile(r"<!-- profile:input\n(.*?)-->", re.S)
 
