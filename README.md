@@ -7,7 +7,8 @@
 | :---: | :--- | :--- | :--- | :--- |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-68a4557e1b74/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-68a4557e1b74) | 小p | `68a4557e1b74` | [查看](members/68a4557e1b74) | [mtsubs](https://github.com/mtsubs) |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-53a6c6c5ef1b/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-53a6c6c5ef1b) | novaeye | `53a6c6c5ef1b` | [查看](members/53a6c6c5ef1b) | [novaeye](https://github.com/novaeye) |
-| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-069be88626d0/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-069be88626d0) | Lei | `069be88626d0` | [查看](members/069be88626d0) | [orgs](https://github.com/orgs) |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-069be88626d0/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-069be88626d0) | Lei | `069be88626d0` | [查看](members/069be88626d0) | [lxj595595](https://github.com/lxj595595) |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-013de2ab63f5/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-013de2ab63f5) | Hyde | `013de2ab63f5` | [查看](members/013de2ab63f5) | [V-Hyde](https://github.com/V-Hyde) |
 <!-- members:end -->
 
 ---
