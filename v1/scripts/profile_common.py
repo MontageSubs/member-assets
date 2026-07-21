@@ -33,8 +33,16 @@ def existing_profiles():
 
 def default_readme():
     return (
-        "# 蒙太奇字幕社区 成员档案\n\n"
-        "本仓库维护蒙太奇字幕社区成员的公开档案信息，供各字幕仓库及未来官网调用。\n\n"
+        "# 蒙太奇字幕社区 成员资料索引\n\n"
+        "这里是社区成员公开资料的聚合索引，由机器人自动汇总并实时维护。\n\n"
+        "> [!WARNING]\n"
+        "> **本页面由机器人自动生成，请勿手动编辑**  \n"
+        "> Auto-generated. Please do not edit manually.\n\n"
+        "### 快速操作指南\n\n"
+        "- **修改资料**：请点击下方表格中对应成员的 **[查看]** 按钮，进入个人资料页面进行编辑。\n"
+        "- **获取头像**：点击表格左侧的 **头像**，即可直接跳转至 Releases 页面获取你的头像永久链接。\n"
+        "- **需要帮助？** 如果你在操作过程中有任何疑问，欢迎阅读 **[社区名片维护指南](https://github.com/MontageSubs/member-assets/)**，或者在群组中询问小伙伴们。\n\n"
+        "---\n\n"
         f"{INDEX_START}\n{INDEX_END}\n\n"
         "---\n\n"
         '<div align="center">\n\n'
@@ -42,7 +50,6 @@ def default_readme():
         '"用爱发电 ❤️ Powered by Love"\n\n'
         "</div>\n"
     )
-
 
 def render_readme(profiles):
     from releases import asset_url
@@ -70,7 +77,7 @@ def render_readme(profiles):
         id_cell = f"`{member_id}`"
         rows.append(f"| {avatar_link} | {display_name} | {id_cell} | {profile_cell} | {github_cell} |")
     table = (
-        "\n".join(["| | 昵称 | 成员 ID | 个人档案 | GitHub |", "| :---: | :--- | :--- | :--- | :--- |", *rows])
+        "\n".join(["| | 昵称 | 成员 ID | 个人资料 | GitHub |", "| :---: | :--- | :--- | :--- | :--- |", *rows])
         if rows
         else "*暂无成员*"
     )
