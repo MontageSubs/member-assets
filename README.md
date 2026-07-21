@@ -45,6 +45,9 @@ member-assets 不仅仅是一个元数据数据库，它是我们每位成员在
    - **基础信息**：请在 `profile:input` 标记的区块内填写。
    - **个性化展示**：你可以自由使用 Markdown 编写你的荣誉、成就或个人寄语。如果编写过程中遇到问题，欢迎在社区群组中求助，成员们会协助你完成。
 
+<details>
+<summary>点击展开查看输入模板</summary>
+
 ```markdown
 <!-- profile:input
 Edit the info below and save — it auto-renders into your profile card · 编辑下方信息并保存，将自动渲染进你的档案卡片
@@ -74,6 +77,7 @@ Specialties · 特长（自定义字段，可自行修改标题 · customizable 
 
 -->
 ```
+</details>
 
 > [!WARNING]
 > **请保护好 HTML 代码**：请勿修改文档中的 HTML 标签或复杂代码块。这些是机器人渲染页面的“骨架”，一旦损坏，你的名片可能会无法正常显示。
