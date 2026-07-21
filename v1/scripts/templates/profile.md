@@ -28,13 +28,14 @@ Specialties · 特长（自定义字段，可自行修改标题 · customizable 
 
 {contributions_block}
 
-<!-- profile:honors:start -->
-<!-- profile:List community honors you have received or awarded to others. · 在此列出你获得或授予他人的社区荣誉。 -->
-## 荣誉
+<!-- profile:achievements:start -->
+<!-- profile:Community Achievements: Showcase yours here, or visit other profiles to award achievements.
+社区成就：在此展示你的成就，或前往他人主页为其颁发成就。-->
+## 成就
 
-{honors_body}
+{achievements_body}
 
-<!-- profile:honors:end -->
+<!-- profile:achievements:end -->
 
 ---
 <!-- profile:Do not edit content below this line · 请勿编辑下方内容 -->
