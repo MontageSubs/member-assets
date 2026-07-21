@@ -52,3 +52,20 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python v1/scripts/migrations/002_english_release_notes.py
+
+      - name: 003 — upgrade templates to the latest version
+        env:
+          DATA_ROOT: ${{ github.workspace }}/v1-data
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python v1/scripts/migrations/003_upgrade_template.py
+
+      - working-directory: v1-data
+        env:
+          ACTOR: ${{ github.actor }}
+          ACTOR_ID: ${{ github.actor_id }}
+        run: |
+          git config user.name "$ACTOR"
+          git config user.email "${ACTOR_ID}+${ACTOR}@users.noreply.github.com"
+          git add members
+          git diff --cached --quiet || git commit -m "chore: migrate templates to latest version (003)"
+          git push origin v1
