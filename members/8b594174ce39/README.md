@@ -74,7 +74,7 @@ is fine; removing the markers themselves breaks automation.
 <!-- profile:meta
 id: 8b594174ce39
 display_name: cococo
-github: ''
+github: fan-cococo
 avatar_source: ''
 avatar_local: false
 type: member
