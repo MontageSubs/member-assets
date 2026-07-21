@@ -9,6 +9,13 @@ PROFILE_AVATAR_SIZE = 96
 TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "profile.md"
 
 
+class SafeDict(dict):
+    """Missing template placeholders render as empty string instead of raising KeyError,
+    so future template edits don't require matching code changes."""
+    def __missing__(self, key):
+        return ""
+
+
 def normalize_github(raw):
     raw = raw.strip().rstrip("/")
     if not raw:
@@ -32,7 +39,7 @@ def github_cell(github):
     return f'<a href="https://github.com/{github}" title="GitHub profile"><b>GitHub</b></a>'
 
 
-def build_readme(frontmatter, bio="", specialties="", community_contributions="", external_contributions="", honors_body="（暂无）"):
+def build_readme(frontmatter, bio="", specialties="", community_contributions="", external_contributions="", achievements_body="（暂无）"):
     member_id = frontmatter["id"]
     display_name = frontmatter.get("display_name", "")
     github = frontmatter.get("github", "")
@@ -44,18 +51,28 @@ def build_readme(frontmatter, bio="", specialties="", community_contributions=""
     if not external_contributions:
         external_contributions = "-"
 
-    if honors_body == "（暂无）" or not honors_body.strip():
-        honors_body = "-"
+    if achievements_body == "（暂无）" or not achievements_body.strip():
+        achievements_body = "-"
 
     bio_line = bio.strip() if bio.strip() else "No bio yet · 暂无简介"
     avatar_html = avatar_cell(member_id, display_name, github)
     github_html = github_cell(github)
     view_url = releases.page_url(member_id)
     frontmatter_yaml = yaml.safe_dump(frontmatter, allow_unicode=True, sort_keys=False)
+    contributions_block = (
+        "<!-- profile:community_contributions:start -->\n"
+        "## 社区贡献\n\n"
+        f"{community_contributions}\n"
+        "<!-- profile:community_contributions:end -->\n\n"
+        "<!-- profile:external_contributions:start -->\n"
+        "## 外部贡献\n\n"
+        f"{external_contributions}\n"
+        "<!-- profile:external_contributions:end -->"
+    )
 
     template_str = TEMPLATE_PATH.read_text(encoding="utf-8")
 
-    return template_str.format(
+    return template_str.format_map(SafeDict(
         display_name=display_name,
         github=github,
         bio=bio,
@@ -65,8 +82,7 @@ def build_readme(frontmatter, bio="", specialties="", community_contributions=""
         github_html=github_html,
         view_url=view_url,
         member_id=member_id,
-        community_contributions=community_contributions,
-        external_contributions=external_contributions,
-        honors_body=honors_body,
+        contributions_block=contributions_block,
+        achievements_body=achievements_body,
         frontmatter_yaml=frontmatter_yaml
-    )
+    ))
