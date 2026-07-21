@@ -10,7 +10,8 @@
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-069be88626d0/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-069be88626d0) | Lei | `069be88626d0` | [查看](members/069be88626d0) | [lxj595595](https://github.com/lxj595595) |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-013de2ab63f5/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-013de2ab63f5) | Hyde | `013de2ab63f5` | [查看](members/013de2ab63f5) | [V-Hyde](https://github.com/V-Hyde) |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-e666aa4855fa/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-e666aa4855fa) | Walker | `e666aa4855fa` | [查看](members/e666aa4855fa) | [wsclon](https://github.com/wsclon) |
-| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-d25cfd7c0545/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-d25cfd7c0545) | NickCollect | `d25cfd7c0545` | [查看](members/d25cfd7c0545) | [NickCollect](https://github.com/NickCollect) |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-d25cfd7c0545/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-d25cfd7c0545) | NickCollect | `d25cfd7c0545` | [查看](members/d25cfd7c0545) | [NickCollect](https://github.com/NickCollect) |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-44de6b9cd5c6/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-44de6b9cd5c6) | William | `44de6b9cd5c6` | [查看](members/44de6b9cd5c6) | [zephyrx](https://github.com/zephyrx) |
 <!-- members:end -->
 
 ---
