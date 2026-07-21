@@ -66,7 +66,7 @@ def build_readme(frontmatter, bio="", specialties="", community_contributions=""
     if achievements_body == "（暂无）" or not achievements_body.strip():
         achievements_body = "-"
 
-    bio_line = bio.strip() if bio.strip() else "No bio yet · 暂无简介"
+    bio_line = bio.strip() if bio.strip() else "暂无简介"
     avatar_html = avatar_cell(member_id, display_name, github)
     github_html = github_cell(github)
     view_url = releases.page_url(member_id)
