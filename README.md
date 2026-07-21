@@ -5,7 +5,8 @@
 <!-- members:start -->
 | | 昵称 | 成员 ID | 个人档案 | GitHub |
 | :---: | :--- | :--- | :--- | :--- |
-| <img src="https://github.com/MontageSubs/member-assets/releases/download/v1-68a4557e1b74/circle-32.png" width="32" alt=""> | 小p | `68a4557e1b74` | [查看](members/68a4557e1b74) | [mtsubs](https://github.com/mtsubs) |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-68a4557e1b74/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-68a4557e1b74) | 小p | `68a4557e1b74` | [查看](members/68a4557e1b74) | [mtsubs](https://github.com/mtsubs) |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-53a6c6c5ef1b/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-53a6c6c5ef1b) | novaeye | `53a6c6c5ef1b` | [查看](members/53a6c6c5ef1b) | [novaeye](https://github.com/novaeye) |
 <!-- members:end -->
 
 ---
