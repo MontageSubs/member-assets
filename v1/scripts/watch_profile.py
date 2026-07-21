@@ -35,22 +35,10 @@ def parse_input_block(text):
     }
 
 
-def preserved_blocks(text):
-    keys = ("community_contributions", "external_contributions")
-    parts = []
-    for key in keys:
-        pattern = re.compile(
-            rf"(<!-- profile:{key}:start -->.*?<!-- profile:{key}:end -->)", re.S
-        )
-        if m := pattern.search(text):
-            parts.append(m.group(1))
-    return "\n\n".join(parts)
-
-
-def honors_body(text):
-    match = re.search(r"<!-- profile:honors:start -->\n.*?\n\n(.*?)<!-- profile:honors:end -->", text, re.S)
+def extract_section_body(text, key):
+    match = re.search(rf"<!-- profile:{key}:start -->\n.*?\n\n(.*?)<!-- profile:{key}:end -->", text, re.S)
     if not match:
-        return "（暂无）"
+        return ""
     return match.group(1).strip()
 
 
@@ -62,6 +50,13 @@ def reconcile_member(member_dir):
     meta_match = FRONTMATTER_PATTERN.search(text)
     if not meta_match:
         write_warning(readme_path, "profile:meta block missing or malformed")
+        return True
+
+    frontmatter = yaml.safe_load(meta_match.group(1)) or {}
+    
+    from profile_renderer import TEMPLATE_VERSION
+    if str(frontmatter.get("template_version", "1")) != TEMPLATE_VERSION:
+        write_warning(readme_path, f"Template version is outdated (current: {frontmatter.get('template_version', '1')}, latest: {TEMPLATE_VERSION}). Please run v1 - Migrate Profiles to upgrade.")
         return True
 
     had_warning = WARNING_START in text
@@ -83,10 +78,11 @@ def reconcile_member(member_dir):
     frontmatter.update(parsed)
     new_text = build_readme(
         frontmatter,
-        bio=parsed["bio"],
-        specialties=parsed["specialties"],
-        contributions_block=preserved_blocks(text),
-        honors_body=honors_body(text),
+        bio=frontmatter.get("bio", ""),
+        specialties=frontmatter.get("specialties", ""),
+        community_contributions=extract_section_body(text, "community_contributions"),
+        external_contributions=extract_section_body(text, "external_contributions"),
+        honors_body=extract_section_body(text, "honors") or "（暂无）",
     )
     readme_path.write_text(new_text, encoding="utf-8")
     return True
