@@ -55,6 +55,8 @@ def render_readme(profiles):
         member_id = profile["id"]
         display_name = profile.get("display_name") or "（未命名）"
         github = profile.get("github") or ""
+        bio = profile.get("bio") or ""
+        bio_line = bio.strip() if bio.strip() else "No bio yet · 暂无简介"
         
         cache = avatar_cache.load(member_id)
         best_size = next((s for s in (96, 48, 32) if f"circle-{s}.png" in cache), 32)
@@ -90,11 +92,11 @@ def write_warning(readme_path, error_detail):
         "> [!CAUTION]\n"
         f"> 此档案的标记结构已损坏，自动化流程无法解析。错误：`{error_detail}`\n"
         ">\n"
-        "> **修复步骤：** 确认 `<!-- profile:display_name:start/end -->`、`<!-- profile:github:start/end -->`、`<!-- profile:meta ... -->` 标记完整无缺，然后在 Actions 页面手动触发 **v1 - Watch Profile**，成功运行后此警告自动消除。\n\n"
+        "> **修复步骤：** 确认 `<!-- profile:input ... -->` 及 `<!-- profile:meta ... -->` 标记完整无缺，然后在 Actions 页面手动触发 **v1 - Watch Profile**，成功运行后此警告自动消除。\n\n"
         "> [!CAUTION]\n"
         f"> The marker structure of this profile is corrupted and cannot be parsed by automation. Error: `{error_detail}`\n"
         ">\n"
-        "> **How to Fix:** Ensure `<!-- profile:display_name:start/end -->`, `<!-- profile:github:start/end -->`, and `<!-- profile:meta ... -->` markers are intact, then manually trigger **v1 - Watch Profile** in Actions. This warning clears automatically on success.\n"
+        "> **How to Fix:** Ensure `<!-- profile:input ... -->` and `<!-- profile:meta ... -->` markers are intact, then manually trigger **v1 - Watch Profile** in Actions. This warning clears automatically on success.\n"
         f"{WARNING_END}\n\n"
     )
     pattern = re.compile(re.escape(WARNING_START) + r".*?" + re.escape(WARNING_END) + r"\n\n", re.S)

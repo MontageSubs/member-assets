@@ -55,59 +55,82 @@ def github_cell(github):
     return f'<a href="https://github.com/{github}" title="GitHub profile"><b>GitHub</b></a>'
 
 
-def write_profile(member_id, display_name, github, created_at):
-    member_dir = MEMBERS_DIR / member_id
-    member_dir.mkdir(parents=True, exist_ok=True)
-    frontmatter = {
-        "id": member_id,
-        "display_name": display_name,
-        "github": github,
-        "avatar_source": "",
-        "avatar_local": False,
-        "type": "member",
-        "created_at": created_at,
-    }
-    content = (
-        "<!--\n"
-        "WARNING: do not remove or reorder the marked sections below.\n"
-        "Automation depends on these markers to detect and update the\n"
-        "display name and GitHub link. Editing content inside a marker\n"
-        "is fine; removing the markers themselves breaks automation.\n"
-        "-->\n\n"
+def input_block(display_name="", github="", bio="", specialties=""):
+    return (
+        "<!-- profile:input\n"
+        "Edit the info below and save — it auto-renders into your profile card · 编辑下方信息并保存，将自动渲染进你的档案卡片\n"
+        "\n"
+        "-----\n"
+        "Nickname · 昵称\n"
+        "-----\n"
+        f"{display_name}\n"
+        "\n"
+        "-----\n"
+        "GitHub — link, username, or leave empty · GitHub 用户名——可填链接、用户名，或留空\n"
+        "-----\n"
+        f"{github}\n"
+        "\n"
+        "-----\n"
+        "Bio · 简介\n"
+        "-----\n"
+        f"{bio}\n"
+        "\n"
+        "-----\n"
+        "Specialties · 特长（自定义字段，可自行修改标题 · customizable title）\n"
+        "-----\n"
+        f"{specialties}\n"
+        "\n"
+        "-->"
+    )
+
+
+def rendered_card(member_id, display_name, github, bio):
+    bio_line = bio.strip() if bio.strip() else "No bio yet · 暂无简介"
+    return (
         "<table>\n<tr>\n<td valign=\"top\">\n\n"
         f"{avatar_cell(member_id, display_name, github)}\n\n"
-        '</td>\n<td valign="top" style="padding-left:20px;">\n\n'
-        "<!-- profile:display_name:start -->\n"
-        f"# {display_name}\n"
-        "<!-- profile:display_name:end -->\n\n"
-        "**简介：** （在此填写自我介绍）\n\n"
-        "**特长：** \n\n"
+        "</td>\n<td valign=\"top\" style=\"padding-left:20px;\">\n\n"
+        f"# {display_name}\n\n"
+        f"{bio_line}\n\n"
         "<table>\n<tr>\n"
         '<th align="center">GitHub</th>\n'
-        '<th align="center">头像 Release</th>\n'
-        '<th align="center">社区成员ID</th>\n'
+        '<th align="center">Avatar Release · 头像</th>\n'
+        '<th align="center">Member ID · 用户ID</th>\n'
         "</tr>\n<tr>\n"
-        '<td align="center">\n'
-        "<!-- profile:github:start -->\n"
-        f"{github_cell(github)}\n"
-        "<!-- profile:github:end -->\n"
-        "</td>\n"
-        f'<td align="center"><a href="{releases.page_url(member_id)}" title="Avatar release page"><b>查看</b></a></td>\n'
+        f'<td align="center">{github_cell(github)}</td>\n'
+        f'<td align="center"><a href="{releases.page_url(member_id)}" title="Avatar release page"><b>View · 查看</b></a></td>\n'
         f'<td align="center"><code>{member_id}</code></td>\n'
         "</tr>\n</table>\n\n"
-        "</td>\n</tr>\n</table>\n\n"
-        "<!-- profile:community_contributions:start -->\n"
-        "## 社区贡献\n\n"
-        "| 项目 | 角色 | 说明 |\n"
-        "| :--- | :--- | :--- |\n"
-        "<!-- profile:community_contributions:end -->\n\n"
-        "<!-- profile:external_contributions:start -->\n"
-        "## 外部贡献\n\n"
-        "- \n"
-        "<!-- profile:external_contributions:end -->\n\n"
+        "</td>\n</tr>\n</table>"
+    )
+
+
+def build_readme(frontmatter, bio="", specialties="", contributions_block="", honors_body="（暂无）"):
+    member_id = frontmatter["id"]
+    display_name = frontmatter.get("display_name", "")
+    github = frontmatter.get("github", "")
+
+    if not contributions_block:
+        contributions_block = (
+            "<!-- profile:community_contributions:start -->\n"
+            "## 社区贡献\n\n"
+            "| 项目 | 角色 | 说明 |\n"
+            "| :--- | :--- | :--- |\n"
+            "<!-- profile:community_contributions:end -->\n\n"
+            "<!-- profile:external_contributions:start -->\n"
+            "## 外部贡献\n\n"
+            "- \n"
+            "<!-- profile:external_contributions:end -->"
+        )
+
+    return (
+        f"{input_block(display_name, github, bio, specialties)}\n\n"
+        f"{rendered_card(member_id, display_name, github, bio)}\n\n"
+        f"{contributions_block}\n\n"
         "<!-- profile:honors:start -->\n"
-        "## 荣誉\n\n"
-        "（暂无）\n"
+        "Maintained by the community team, not by yourself · 由社区管理团队维护，无需自行编辑\n\n"
+        "## Honors · 荣誉\n\n"
+        f"{honors_body}\n"
         "<!-- profile:honors:end -->\n\n"
         "---\n\n"
         '<div align="center">\n\n'
@@ -116,9 +139,25 @@ def write_profile(member_id, display_name, github, created_at):
         "</div>\n\n"
         "<!-- profile:meta\n"
         + yaml.safe_dump(frontmatter, allow_unicode=True, sort_keys=False)
-        + "-->\n"
+        + "-->"
     )
-    (member_dir / "README.md").write_text(content, encoding="utf-8")
+
+
+def write_profile(member_id, display_name, github, created_at):
+    member_dir = MEMBERS_DIR / member_id
+    member_dir.mkdir(parents=True, exist_ok=True)
+    frontmatter = {
+        "id": member_id,
+        "display_name": display_name,
+        "github": github,
+        "bio": "",
+        "specialties": "",
+        "avatar_source": "",
+        "avatar_local": False,
+        "type": "member",
+        "created_at": created_at,
+    }
+    (member_dir / "README.md").write_text(build_readme(frontmatter), encoding="utf-8")
 
 
 def main():

@@ -36,7 +36,7 @@ def notes_body(member_id, asset_names):
         )
 
     return (
-        "蒙太奇字幕社区 (MontageSubs) member avatar assets\n"
+        "MontageSubs member avatar assets\n"
         f"Profile: [members/{member_id}]({profile_url(member_id)})\n\n"
         f"**Square**\n\n{header}\n{rows('square')}\n\n"
         f"**Circle**\n\n{header}\n{rows('circle')}\n"

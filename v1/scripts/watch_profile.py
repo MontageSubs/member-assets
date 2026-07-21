@@ -12,27 +12,46 @@ from profile_common import (
     existing_profiles,
     render_readme,
 )
+from create_profile import build_readme, normalize_github
 
-DISPLAY_NAME_PATTERN = re.compile(
-    r"<!-- profile:display_name:start -->\s*#\s*(.+?)\s*<!-- profile:display_name:end -->", re.S
-)
-GITHUB_MARKER_PATTERN = re.compile(
-    r"<!-- profile:github:start -->(.*?)<!-- profile:github:end -->", re.S
-)
-GITHUB_HREF_PATTERN = re.compile(r'href="https://github\.com/([^"/]+)"')
+INPUT_PATTERN = re.compile(r"<!-- profile:input\n(.*?)-->", re.S)
 
 
-def live_display_name(text, fallback):
-    match = DISPLAY_NAME_PATTERN.search(text)
-    return match.group(1).strip() if match else fallback
-
-
-def live_github(text, fallback):
-    match = GITHUB_MARKER_PATTERN.search(text)
+def parse_input_block(text):
+    match = INPUT_PATTERN.search(text)
     if not match:
-        return fallback
-    href_match = GITHUB_HREF_PATTERN.search(match.group(1))
-    return href_match.group(1) if href_match else ""
+        return None
+    body = match.group(1)
+    segments = re.split(r"\n-----\n", body)
+    if len(segments) < 9:
+        return None
+    def value(seg):
+        return seg.strip()
+    return {
+        "display_name": value(segments[2]),
+        "github":       normalize_github(value(segments[4])),
+        "bio":          value(segments[6]),
+        "specialties":  value(segments[8]),
+    }
+
+
+def preserved_blocks(text):
+    keys = ("community_contributions", "external_contributions")
+    parts = []
+    for key in keys:
+        pattern = re.compile(
+            rf"(<!-- profile:{key}:start -->.*?<!-- profile:{key}:end -->)", re.S
+        )
+        if m := pattern.search(text):
+            parts.append(m.group(1))
+    return "\n\n".join(parts)
+
+
+def honors_body(text):
+    match = re.search(r"<!-- profile:honors:start -->\n.*?\n\n(.*?)<!-- profile:honors:end -->", text, re.S)
+    if not match:
+        return "（暂无）"
+    return match.group(1).strip()
 
 
 def reconcile_member(member_dir):
@@ -40,27 +59,36 @@ def reconcile_member(member_dir):
     if not readme_path.exists():
         return False
     text = readme_path.read_text(encoding="utf-8")
-    match = FRONTMATTER_PATTERN.search(text)
-    if not match:
+    meta_match = FRONTMATTER_PATTERN.search(text)
+    if not meta_match:
         write_warning(readme_path, "profile:meta block missing or malformed")
         return True
 
     had_warning = WARNING_START in text
     clear_warning(readme_path)
     text = readme_path.read_text(encoding="utf-8")
-    match = FRONTMATTER_PATTERN.search(text)
+    meta_match = FRONTMATTER_PATTERN.search(text)
 
-    frontmatter = yaml.safe_load(match.group(1)) or {}
-    display_name = live_display_name(text, frontmatter.get("display_name", ""))
-    github = live_github(text, frontmatter.get("github", ""))
+    frontmatter = yaml.safe_load(meta_match.group(1)) or {}
+    parsed = parse_input_block(text)
 
-    if frontmatter.get("display_name") == display_name and frontmatter.get("github") == github:
+    if parsed is None:
+        write_warning(readme_path, "profile:input block missing or malformed")
+        return True
+
+    changed = any(frontmatter.get(k) != parsed[k] for k in parsed)
+    if not changed:
         return had_warning
 
-    frontmatter["display_name"] = display_name
-    frontmatter["github"] = github
-    new_block = "<!-- profile:meta\n" + yaml.safe_dump(frontmatter, allow_unicode=True, sort_keys=False) + "-->"
-    readme_path.write_text(text[: match.start()] + new_block + text[match.end() :], encoding="utf-8")
+    frontmatter.update(parsed)
+    new_text = build_readme(
+        frontmatter,
+        bio=parsed["bio"],
+        specialties=parsed["specialties"],
+        contributions_block=preserved_blocks(text),
+        honors_body=honors_body(text),
+    )
+    readme_path.write_text(new_text, encoding="utf-8")
     return True
 
 
