@@ -31,7 +31,7 @@ is fine; removing the markers themselves breaks automation.
 <tr>
 <td align="center">
 <!-- profile:github:start -->
-—
+<a href="https://github.com/fan-cococo" title="GitHub profile"><b>GitHub</b></a>
 <!-- profile:github:end -->
 </td>
 <td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-8b594174ce39" title="Avatar release page"><b>查看</b></a></td>
