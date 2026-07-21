@@ -22,7 +22,7 @@ Specialties · 特长（自定义字段，可自行修改标题 · customizable 
 
 # 小p
 
-No bio yet · 暂无简介
+热爱电影，喜欢猫猫，钻研翻译
 
 <table><tr><th align="center">GitHub</th><th align="center">Avatar Release · 头像</th><th align="center">Member ID · 用户ID</th></tr><tr><td align="center"><a href="https://github.com/mtsubs" title="GitHub profile"><b>GitHub</b></a></td><td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-68a4557e1b74" title="Avatar release page"><b>View · 查看</b></a></td><td align="center"><code>68a4557e1b74</code></td></tr></table></td></tr></table>
 
@@ -65,7 +65,7 @@ avatar_source: ''
 avatar_local: false
 type: member
 created_at: '2026-07-21T10:59:13Z'
-bio: ''
-specialties: ''
+bio: 热爱电影，喜欢猫猫，钻研翻译
+specialties: 翻译、轻量的编码
 template_version: '2'
 -->
