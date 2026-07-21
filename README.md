@@ -1,4 +1,4 @@
-# 蒙太奇字幕社区 成员档案
+# 蒙太奇字幕社区 成员资料索引
 
 这里是社区成员公开资料的聚合索引，由机器人自动汇总并实时维护。
 
@@ -13,7 +13,7 @@
 - **需要帮助？** 如果你在操作过程中有任何疑问，欢迎阅读 **[社区名片维护指南](../../README.md)**，或者在群组中询问小伙伴们。
 
 <!-- members:start -->
-| | 昵称 | 成员 ID | 个人档案 | GitHub |
+| | 昵称 | 成员 ID | 个人资料 | GitHub |
 | :---: | :--- | :--- | :--- | :--- |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-68a4557e1b74/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-68a4557e1b74) | 小p | `68a4557e1b74` | [查看](members/68a4557e1b74) | [mtsubs](https://github.com/mtsubs) |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-53a6c6c5ef1b/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-53a6c6c5ef1b) | novaeye | `53a6c6c5ef1b` | [查看](members/53a6c6c5ef1b) | [novaeye](https://github.com/novaeye) |
