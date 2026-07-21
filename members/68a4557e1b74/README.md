@@ -78,5 +78,5 @@ type: member
 created_at: '2026-07-21T10:59:13Z'
 bio: 热爱电影，喜欢猫猫，钻研翻译
 specialties: 翻译、轻量的编码
-template_version: '3'
+template_version: '3.1'
 -->

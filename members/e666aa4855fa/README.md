@@ -27,7 +27,7 @@ Specialties · 特长（自定义字段，可自行修改标题 · customizable 
 </div></td><td valign="top" style="padding-left:20px;">
 
 # Walker  
-No bio yet · 暂无简介  
+暂无简介  
 <table><tr><th align="center">头像</th><th align="center">GitHub</th><th align="center">成员ID</th></tr><tr><td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-e666aa4855fa" title="Avatar release page"><b>持久链接</b></a></td><td align="center"><a href="https://github.com/wsclon" title="GitHub profile"><b>GitHub</b></a></td><td align="center"><code>e666aa4855fa</code></td></tr></table></td></tr></table>
 <!-- profile:Do not edit code block above this line · 请勿编辑上方代码块 -->
 
@@ -78,5 +78,5 @@ type: member
 created_at: '2026-07-21T11:27:14Z'
 bio: ''
 specialties: ''
-template_version: '3'
+template_version: '3.1'
 -->
