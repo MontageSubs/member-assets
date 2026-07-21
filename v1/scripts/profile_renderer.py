@@ -68,6 +68,7 @@ def build_readme(frontmatter, bio="", specialties="", specialties_title=DEFAULT_
         achievements_body = "-"
 
     bio_line = bio.strip() if bio.strip() else "暂无简介"
+    specialties_line = specialties.strip() if specialties.strip() else "暂无"
     specialties_value = specialties.strip()
     title_customized = specialties_title.strip() and specialties_title.strip() != DEFAULT_SPECIALTIES_TITLE
 
