@@ -1,3 +1,4 @@
+<!-- template:version: 3 -->
 <!-- profile:input
 Edit the info below and save — it auto-renders into your profile card · 编辑下方信息并保存，将自动渲染进你的档案卡片
 -----
