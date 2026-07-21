@@ -1,19 +1,19 @@
 <!-- profile:input
 Edit the info below and save — it auto-renders into your profile card · 编辑下方信息并保存，将自动渲染进你的档案卡片
 -----
-Nickname · 昵称
+昵称
 -----
 cococo
 -----
-GitHub — link, username, or leave empty · GitHub 用户名——可填链接、用户名，或留空
+GitHub 用户名 —— 可填链接、用户名，或留空
 -----
 fan-cococo
 -----
-Bio · 简介
+简介
 -----
 
 -----
-Specialties · 特长（自定义字段，可自行修改标题 · customizable title）
+特长 (编辑此行即可自定义标题)
 -----
 
 -->
