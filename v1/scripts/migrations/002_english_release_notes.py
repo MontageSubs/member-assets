@@ -5,7 +5,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from profile_common import MEMBERS_DIR, existing_profiles
-from releases import repo, tag, notes_body, asset_url, sync_notes
+from releases import repo, tag, sync_notes
 
 
 def _asset_names_from_release(member_id):

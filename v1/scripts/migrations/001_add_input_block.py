@@ -7,7 +7,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from profile_common import MEMBERS_DIR, FRONTMATTER_PATTERN
-from create_profile import build_readme
+from profile_renderer import build_readme
 
 INPUT_MARKER = "<!-- profile:input"
 
