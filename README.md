@@ -13,7 +13,8 @@
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-d25cfd7c0545/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-d25cfd7c0545) | NickCollect | `d25cfd7c0545` | [查看](members/d25cfd7c0545) | [NickCollect](https://github.com/NickCollect) |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-44de6b9cd5c6/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-44de6b9cd5c6) | William | `44de6b9cd5c6` | [查看](members/44de6b9cd5c6) | [zephyrx](https://github.com/zephyrx) |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-2aca81180f51/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-2aca81180f51) | Frank | `2aca81180f51` | [查看](members/2aca81180f51) | — |
-| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-8b594174ce39/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-8b594174ce39) | cococo | `8b594174ce39` | [查看](members/8b594174ce39) | — |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-8b594174ce39/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-8b594174ce39) | cococo | `8b594174ce39` | [查看](members/8b594174ce39) | — |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-5a1030cf11cd/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-5a1030cf11cd) | 十三 | `5a1030cf11cd` | [查看](members/5a1030cf11cd) | [Sydiuan](https://github.com/Sydiuan) |
 <!-- members:end -->
 
 ---
