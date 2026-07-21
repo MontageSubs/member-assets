@@ -11,11 +11,11 @@ mtsubs
 -----
 Bio · 简介
 -----
-
+热爱电影，喜欢猫猫，钻研翻译
 -----
 Specialties · 特长（自定义字段，可自行修改标题 · customizable title）
 -----
-
+翻译、轻量的编码
 -->
 
 <table><tr><td valign="top"><a href="https://github.com/mtsubs" title="GitHub profile"><img src="https://github.com/MontageSubs/member-assets/releases/download/v1-68a4557e1b74/circle-96.png" width="96" alt="Avatar of 小p"></a></td><td valign="top" style="padding-left:20px;">
