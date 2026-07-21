@@ -6,7 +6,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from profile_common import MEMBERS_DIR, FRONTMATTER_PATTERN
-from profile_renderer import build_readme, TEMPLATE_VERSION, DEFAULT_SPECIALTIES_TITLE
+from profile_renderer import build_readme, TEMPLATE_VERSION
 from watch_profile import parse_input_block, extract_section_body
 
 
@@ -35,7 +35,6 @@ def migrate(readme_path):
         frontmatter,
         bio=frontmatter.get("bio", ""),
         specialties=frontmatter.get("specialties", ""),
-        specialties_title=frontmatter.get("specialties_title", DEFAULT_SPECIALTIES_TITLE),
         community_contributions=extract_section_body(text, "community_contributions"),
         external_contributions=extract_section_body(text, "external_contributions"),
         achievements_body=old_honors or "（暂无）",
