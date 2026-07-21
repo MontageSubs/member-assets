@@ -1,57 +1,30 @@
 <!-- profile:input
 Edit the info below and save — it auto-renders into your profile card · 编辑下方信息并保存，将自动渲染进你的档案卡片
-
 -----
 Nickname · 昵称
 -----
 Lei
-
 -----
 GitHub — link, username, or leave empty · GitHub 用户名——可填链接、用户名，或留空
 -----
 lxj595595
-
 -----
 Bio · 简介
 -----
-
 
 -----
 Specialties · 特长（自定义字段，可自行修改标题 · customizable title）
 -----
 
-
 -->
 
-<table>
-<tr>
-<td valign="top">
-
-<a href="https://github.com/lxj595595" title="GitHub profile"><img src="https://github.com/MontageSubs/member-assets/releases/download/v1-069be88626d0/circle-96.png" width="96" alt="Avatar of Lei"></a>
-
-</td>
-<td valign="top" style="padding-left:20px;">
+<table><tr><td valign="top"><a href="https://github.com/lxj595595" title="GitHub profile"><img src="https://github.com/MontageSubs/member-assets/releases/download/v1-069be88626d0/circle-96.png" width="96" alt="Avatar of Lei"></a></td><td valign="top" style="padding-left:20px;">
 
 # Lei
 
 No bio yet · 暂无简介
 
-<table>
-<tr>
-<th align="center">GitHub</th>
-<th align="center">Avatar Release · 头像</th>
-<th align="center">Member ID · 用户ID</th>
-</tr>
-<tr>
-<td align="center"><a href="https://github.com/lxj595595" title="GitHub profile"><b>GitHub</b></a></td>
-<td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-069be88626d0" title="Avatar release page"><b>View · 查看</b></a></td>
-<td align="center"><code>069be88626d0</code></td>
-</tr>
-</table>
-
-</td>
-</tr>
-</table>
+<table><tr><th align="center">GitHub</th><th align="center">Avatar Release · 头像</th><th align="center">Member ID · 用户ID</th></tr><tr><td align="center"><a href="https://github.com/lxj595595" title="GitHub profile"><b>GitHub</b></a></td><td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-069be88626d0" title="Avatar release page"><b>View · 查看</b></a></td><td align="center"><code>069be88626d0</code></td></tr></table></td></tr></table>
 
 <!-- profile:community_contributions:start -->
 ## 社区贡献
@@ -66,16 +39,17 @@ No bio yet · 暂无简介
 -
 <!-- profile:external_contributions:end -->
 
-<!-- profile:honors:start -->
-Maintained by the community team, not by yourself · 由社区管理团队维护，无需自行编辑
+<!-- profile:achievements:start -->
+<!-- profile:Community Achievements: Showcase yours here, or visit other profiles to award achievements.
+社区成就：在此展示你的成就，或前往他人主页为其颁发成就。-->
+## 成就
 
-## Honors · 荣誉
+-
 
-（暂无）
-<!-- profile:honors:end -->
+<!-- profile:achievements:end -->
 
 ---
-
+<!-- profile:Do not edit content below this line · 请勿编辑下方内容 -->
 <div align="center">
 
 **蒙太奇字幕社区 (MontageSubs)**  
@@ -93,4 +67,5 @@ type: member
 created_at: '2026-07-21T11:23:12Z'
 bio: ''
 specialties: ''
+template_version: '2'
 -->
