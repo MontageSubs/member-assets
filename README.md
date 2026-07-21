@@ -37,7 +37,8 @@
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-a0b47f1933b0/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-a0b47f1933b0) | Balding | `a0b47f1933b0` | [查看](members/a0b47f1933b0) | [BaldingXYZ](https://github.com/BaldingXYZ) |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-9e87d020efd5/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-9e87d020efd5) | Ke | `9e87d020efd5` | [查看](members/9e87d020efd5) | — |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-9fa086be0389/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-9fa086be0389) | Hypnotism | `9fa086be0389` | [查看](members/9fa086be0389) | [SmokedCherries](https://github.com/SmokedCherries) |
-| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-4598f11ac043/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-4598f11ac043) | NEST | `4598f11ac043` | [查看](members/4598f11ac043) | [4Nest](https://github.com/4Nest) |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-4598f11ac043/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-4598f11ac043) | NEST | `4598f11ac043` | [查看](members/4598f11ac043) | [4Nest](https://github.com/4Nest) |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-3545d2ee7fc2/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-3545d2ee7fc2) | 匿名贡献者 | `3545d2ee7fc2` | [查看](members/3545d2ee7fc2) | — |
 <!-- members:end -->
 
 ---
