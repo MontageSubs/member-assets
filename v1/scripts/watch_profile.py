@@ -82,7 +82,7 @@ def reconcile_member(member_dir):
         specialties=frontmatter.get("specialties", ""),
         community_contributions=extract_section_body(text, "community_contributions"),
         external_contributions=extract_section_body(text, "external_contributions"),
-        honors_body=extract_section_body(text, "honors") or "（暂无）",
+        achievements_body=extract_section_body(text, "achievements") or "（暂无）",
     )
     readme_path.write_text(new_text, encoding="utf-8")
     return True
