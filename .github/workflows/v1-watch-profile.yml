@@ -1,0 +1,70 @@
+name: v1 - Watch Profile
+
+on:
+  workflow_dispatch:
+    inputs:
+      member_id:
+        description: Community member ID to check, leave empty to check all / 要检查的社区成员ID，留空则检查全部
+        required: false
+        type: string
+  push:
+    branches: [v1]
+    paths: ["members/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: v1-data-update
+  cancel-in-progress: false
+
+jobs:
+  watch-profile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/checkout@v4
+        with:
+          ref: v1
+          path: v1-data
+          fetch-depth: 0
+
+      - id: changed
+        working-directory: v1-data
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
+            ids=$(git diff --name-only "${{ github.event.before }}" "${{ github.event.after }}" -- members | awk -F/ '{print $2}' | sort -u | paste -sd, -)
+          else
+            ids="${{ inputs.member_id }}"
+          fi
+          echo "member_id=$ids" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install uv && uv pip install --system pyyaml
+
+      - env:
+          INPUT_MEMBER_ID: ${{ steps.changed.outputs.member_id }}
+          DATA_ROOT: ${{ github.workspace }}/v1-data
+        run: python v1/scripts/watch_profile.py
+
+      - working-directory: v1-data
+        env:
+          ACTOR: ${{ github.actor }}
+          ACTOR_ID: ${{ github.actor_id }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            git config user.name "$ACTOR"
+            git config user.email "${ACTOR_ID}+${ACTOR}@users.noreply.github.com"
+          else
+            git config user.name "montagesubs-bot"
+            git config user.email "actions@users.noreply.github.com"
+          fi
+          git add members
+          git diff --cached --quiet || git commit -m "chore: reconcile profile metadata"
+          git push origin v1

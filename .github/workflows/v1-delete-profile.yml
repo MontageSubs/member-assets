@@ -1,0 +1,54 @@
+name: v1 - Delete Profile
+
+on:
+  workflow_dispatch:
+    inputs:
+      member_id:
+        description: "⚠️ Destructive operation, run only by the profile owner or a community admin. Community member ID to delete / 破坏性操作，仅限本人或社区管理员执行。要删除的社区成员ID"
+        required: true
+        type: string
+      confirmation:
+        description: "Type exactly, in English: DELETE <member_id> (e.g. DELETE de9f32cf39b8) / 请精确输入英文确认文本：DELETE <社区成员ID>（例如 DELETE de9f32cf39b8）"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  delete-profile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/checkout@v4
+        with:
+          ref: v1
+          path: v1-data
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install uv && uv pip install --system pyyaml
+
+      - env:
+          INPUT_MEMBER_ID: ${{ inputs.member_id }}
+          INPUT_CONFIRMATION: ${{ inputs.confirmation }}
+          DATA_ROOT: ${{ github.workspace }}/v1-data
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python v1/scripts/delete_profile.py
+
+      - working-directory: v1-data
+        env:
+          ACTOR: ${{ github.actor }}
+          ACTOR_ID: ${{ github.actor_id }}
+        run: |
+          git config user.name "$ACTOR"
+          git config user.email "${ACTOR_ID}+${ACTOR}@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: delete member ${{ inputs.member_id }}"
+          git push origin v1
