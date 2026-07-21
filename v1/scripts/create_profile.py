@@ -4,7 +4,7 @@ import uuid
 from datetime import datetime, timezone
 
 from profile_common import MEMBERS_DIR, existing_profiles, render_readme
-from profile_renderer import build_readme, normalize_github
+from profile_renderer import build_readme, normalize_github, DEFAULT_SPECIALTIES_TITLE
 
 
 def now_iso():
@@ -37,6 +37,7 @@ def write_profile(member_id, display_name, github, created_at):
         "github": github,
         "bio": "",
         "specialties": "",
+        "specialties_title": DEFAULT_SPECIALTIES_TITLE,
         "avatar_source": "",
         "avatar_local": False,
         "type": "member",

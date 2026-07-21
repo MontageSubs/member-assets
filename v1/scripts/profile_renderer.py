@@ -8,6 +8,7 @@ import releases
 PROFILE_AVATAR_SIZE = 96
 TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "profile.md"
 VERSION_MARKER = re.compile(r"^<!-- template:version:\s*(\S+)\s*-->\n+")
+DEFAULT_SPECIALTIES_TITLE = "特长 (编辑此行即可自定义标题)"
 
 
 def _load_template():
@@ -51,7 +52,7 @@ def github_cell(github):
     return f'<a href="https://github.com/{github}" title="GitHub profile"><b>GitHub</b></a>'
 
 
-def build_readme(frontmatter, bio="", specialties="", community_contributions="", external_contributions="", achievements_body="（暂无）"):
+def build_readme(frontmatter, bio="", specialties="", specialties_title=DEFAULT_SPECIALTIES_TITLE, community_contributions="", external_contributions="", achievements_body="（暂无）"):
     member_id = frontmatter["id"]
     display_name = frontmatter.get("display_name", "")
     github = frontmatter.get("github", "")
@@ -67,6 +68,7 @@ def build_readme(frontmatter, bio="", specialties="", community_contributions=""
         achievements_body = "-"
 
     bio_line = bio.strip() if bio.strip() else "暂无简介"
+    specialties_line = specialties.strip() if specialties.strip() else "暂无"
     avatar_html = avatar_cell(member_id, display_name, github)
     github_html = github_cell(github)
     view_url = releases.page_url(member_id)
@@ -89,6 +91,8 @@ def build_readme(frontmatter, bio="", specialties="", community_contributions=""
         github=github,
         bio=bio,
         specialties=specialties,
+        specialties_line=specialties_line,
+        specialties_title=specialties_title,
         avatar_html=avatar_html,
         bio_line=bio_line,
         github_html=github_html,

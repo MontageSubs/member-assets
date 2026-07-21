@@ -12,7 +12,7 @@ from profile_common import (
     existing_profiles,
     render_readme,
 )
-from profile_renderer import build_readme, normalize_github
+from profile_renderer import build_readme, normalize_github, DEFAULT_SPECIALTIES_TITLE
 
 INPUT_PATTERN = re.compile(r"<!-- profile:input\n(.*?)-->", re.S)
 
@@ -28,10 +28,11 @@ def parse_input_block(text):
     def value(seg):
         return seg.strip()
     return {
-        "display_name": value(segments[2]),
-        "github":       normalize_github(value(segments[4])),
-        "bio":          value(segments[6]),
-        "specialties":  value(segments[8]),
+        "display_name":      value(segments[2]),
+        "github":            normalize_github(value(segments[4])),
+        "bio":               value(segments[6]),
+        "specialties":       value(segments[8]),
+        "specialties_title": value(segments[7]),
     }
 
 
@@ -80,6 +81,7 @@ def reconcile_member(member_dir):
         frontmatter,
         bio=frontmatter.get("bio", ""),
         specialties=frontmatter.get("specialties", ""),
+        specialties_title=frontmatter.get("specialties_title", DEFAULT_SPECIALTIES_TITLE),
         community_contributions=extract_section_body(text, "community_contributions"),
         external_contributions=extract_section_body(text, "external_contributions"),
         achievements_body=extract_section_body(text, "achievements") or "（暂无）",
