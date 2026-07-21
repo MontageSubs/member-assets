@@ -8,7 +8,6 @@ import releases
 PROFILE_AVATAR_SIZE = 96
 TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "profile.md"
 VERSION_MARKER = re.compile(r"^<!-- template:version:\s*(\S+)\s*-->\n+")
-DEFAULT_SPECIALTIES_TITLE = "特长"
 
 
 def _load_template():
@@ -52,7 +51,7 @@ def github_cell(github):
     return f'<a href="https://github.com/{github}" title="GitHub profile"><b>GitHub</b></a>'
 
 
-def build_readme(frontmatter, bio="", specialties="", specialties_title=DEFAULT_SPECIALTIES_TITLE, community_contributions="", external_contributions="", achievements_body="（暂无）"):
+def build_readme(frontmatter, bio="", specialties="", community_contributions="", external_contributions="", achievements_body="（暂无）"):
     member_id = frontmatter["id"]
     display_name = frontmatter.get("display_name", "")
     github = frontmatter.get("github", "")
@@ -68,16 +67,8 @@ def build_readme(frontmatter, bio="", specialties="", specialties_title=DEFAULT_
         achievements_body = "-"
 
     bio_line = bio.strip() if bio.strip() else "暂无简介"
-    specialties_line = specialties.strip() if specialties.strip() else "暂无"
     specialties_value = specialties.strip()
-    title_customized = specialties_title.strip() and specialties_title.strip() != DEFAULT_SPECIALTIES_TITLE
-
-    if not specialties_value and not title_customized:
-        specialties_display = "暂无"
-    elif title_customized:
-        specialties_display = f"{specialties_title.strip()}：{specialties_value or '暂无'}"
-    else:
-        specialties_display = f"{DEFAULT_SPECIALTIES_TITLE}：{specialties_value}"
+    specialties_display = f"贡献领域：{specialties_value}  \n" if specialties_value else ""
     avatar_html = avatar_cell(member_id, display_name, github)
     github_html = github_cell(github)
     view_url = releases.page_url(member_id)
