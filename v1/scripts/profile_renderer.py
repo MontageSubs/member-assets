@@ -8,7 +8,7 @@ import releases
 PROFILE_AVATAR_SIZE = 96
 TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "profile.md"
 VERSION_MARKER = re.compile(r"^<!-- template:version:\s*(\S+)\s*-->\n+")
-DEFAULT_SPECIALTIES_TITLE = "特长 (编辑此行即可自定义标题)"
+DEFAULT_SPECIALTIES_TITLE = "特长"
 
 
 def _load_template():
@@ -68,7 +68,15 @@ def build_readme(frontmatter, bio="", specialties="", specialties_title=DEFAULT_
         achievements_body = "-"
 
     bio_line = bio.strip() if bio.strip() else "暂无简介"
-    specialties_line = specialties.strip() if specialties.strip() else "暂无"
+    specialties_value = specialties.strip()
+    title_customized = specialties_title.strip() and specialties_title.strip() != DEFAULT_SPECIALTIES_TITLE
+
+    if not specialties_value and not title_customized:
+        specialties_display = "暂无"
+    elif title_customized:
+        specialties_display = f"{specialties_title.strip()}：{specialties_value or '暂无'}"
+    else:
+        specialties_display = f"{DEFAULT_SPECIALTIES_TITLE}：{specialties_value}"
     avatar_html = avatar_cell(member_id, display_name, github)
     github_html = github_cell(github)
     view_url = releases.page_url(member_id)
@@ -91,8 +99,7 @@ def build_readme(frontmatter, bio="", specialties="", specialties_title=DEFAULT_
         github=github,
         bio=bio,
         specialties=specialties,
-        specialties_line=specialties_line,
-        specialties_title=specialties_title,
+        specialties_display=specialties_display,
         avatar_html=avatar_html,
         bio_line=bio_line,
         github_html=github_html,
