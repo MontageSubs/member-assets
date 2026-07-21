@@ -1,0 +1,54 @@
+name: v1 - Migrate Profiles
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: v1-data-update
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/checkout@v4
+        with:
+          ref: v1
+          path: v1-data
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install uv && uv pip install --system pyyaml
+
+      - name: 001 — add input block to profiles
+        env:
+          DATA_ROOT: ${{ github.workspace }}/v1-data
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python v1/scripts/migrations/001_add_input_block.py
+
+      - working-directory: v1-data
+        env:
+          ACTOR: ${{ github.actor }}
+          ACTOR_ID: ${{ github.actor_id }}
+        run: |
+          git config user.name "$ACTOR"
+          git config user.email "${ACTOR_ID}+${ACTOR}@users.noreply.github.com"
+          git add members
+          git diff --cached --quiet || git commit -m "chore: migrate profiles to input-block format (001)"
+          git push origin v1
+
+      - name: 002 — update release notes to English
+        env:
+          DATA_ROOT: ${{ github.workspace }}/v1-data
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python v1/scripts/migrations/002_english_release_notes.py
