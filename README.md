@@ -16,7 +16,8 @@
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-8b594174ce39/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-8b594174ce39) | cococo | `8b594174ce39` | [查看](members/8b594174ce39) | [fan-cococo](https://github.com/fan-cococo) |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-5a1030cf11cd/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-5a1030cf11cd) | 十三 | `5a1030cf11cd` | [查看](members/5a1030cf11cd) | [Sydiuan](https://github.com/Sydiuan) |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-b9b72730aa57/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-b9b72730aa57) | 豆子 | `b9b72730aa57` | [查看](members/b9b72730aa57) | [EgonThorne](https://github.com/EgonThorne) |
-| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-aa3c14ccdeec/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-aa3c14ccdeec) | Charlie | `aa3c14ccdeec` | [查看](members/aa3c14ccdeec) | [CharlieeHann](https://github.com/CharlieeHann) |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-aa3c14ccdeec/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-aa3c14ccdeec) | Charlie | `aa3c14ccdeec` | [查看](members/aa3c14ccdeec) | [CharlieeHann](https://github.com/CharlieeHann) |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-7f57c20fc18a/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-7f57c20fc18a) | 粑粑超人 | `7f57c20fc18a` | [查看](members/7f57c20fc18a) | — |
 <!-- members:end -->
 
 ---
