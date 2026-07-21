@@ -1,5 +1,5 @@
 <!-- profile:input
-Edit the info below and save — it auto-renders into your profile card · 编辑下方信息并保存，将自动渲染进你的档案卡片
+编辑下方信息并保存，将自动渲染进你的档案卡片
 -----
 昵称
 -----
@@ -13,7 +13,7 @@ GitHub 用户名 —— 可填链接、用户名，或留空
 -----
 
 -----
-特长 (编辑此行即可自定义标题)
+贡献领域
 -----
 
 -->
@@ -46,8 +46,7 @@ GitHub 用户名 —— 可填链接、用户名，或留空
 <!-- profile:external_contributions:end -->
 
 <!-- profile:achievements:start -->
-<!-- profile:Community Achievements: Showcase yours here, or visit other profiles to award achievements.
-社区成就：在此展示你的成就，或前往他人主页为其颁发成就。-->
+<!-- profile:社区成就：在此展示你的成就，或前往他人主页为其颁发成就。-->
 ## 成就
 
 -
@@ -77,5 +76,5 @@ type: member
 created_at: '2026-07-21T11:56:04Z'
 bio: ''
 specialties: ''
-template_version: '3.2'
+template_version: '3.4'
 -->

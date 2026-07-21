@@ -1,5 +1,5 @@
 <!-- profile:input
-Edit the info below and save — it auto-renders into your profile card · 编辑下方信息并保存，将自动渲染进你的档案卡片
+编辑下方信息并保存，将自动渲染进你的档案卡片
 -----
 昵称
 -----
@@ -13,7 +13,7 @@ mtsubs
 -----
 热爱电影，喜欢猫猫，钻研翻译
 -----
-特长 (编辑此行即可自定义标题)
+贡献领域
 -----
 翻译、轻量的编码
 -->
@@ -26,7 +26,8 @@ mtsubs
 
 # 小p  
 热爱电影，喜欢猫猫，钻研翻译  
-翻译、轻量的编码<table><tr><th align="center">头像</th><th align="center">GitHub</th><th align="center">成员ID</th></tr><tr><td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-68a4557e1b74" title="Avatar release page"><b>持久链接</b></a></td><td align="center"><a href="https://github.com/mtsubs" title="GitHub profile"><b>GitHub</b></a></td><td align="center"><code>68a4557e1b74</code></td></tr></table></td></tr></table><sub><a href="https://github.com/MontageSubs/member-assets/upload/v1/members/68a4557e1b74/avatar">添加自定义头像</a> · <a href="https://github.com/MontageSubs/member-assets/tree/v1/members/68a4557e1b74/avatar">查看自定义头像</a></sub>
+贡献领域：翻译、轻量的编码  
+<table><tr><th align="center">头像</th><th align="center">GitHub</th><th align="center">成员ID</th></tr><tr><td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-68a4557e1b74" title="Avatar release page"><b>持久链接</b></a></td><td align="center"><a href="https://github.com/mtsubs" title="GitHub profile"><b>GitHub</b></a></td><td align="center"><code>68a4557e1b74</code></td></tr></table></td></tr></table><sub><a href="https://github.com/MontageSubs/member-assets/upload/v1/members/68a4557e1b74/avatar">添加自定义头像</a> · <a href="https://github.com/MontageSubs/member-assets/tree/v1/members/68a4557e1b74/avatar">查看自定义头像</a></sub>
 <!-- profile:Do not edit code block above this line · 请勿编辑上方代码块 -->
 
 
@@ -46,8 +47,7 @@ mtsubs
 <!-- profile:external_contributions:end -->
 
 <!-- profile:achievements:start -->
-<!-- profile:Community Achievements: Showcase yours here, or visit other profiles to award achievements.
-社区成就：在此展示你的成就，或前往他人主页为其颁发成就。-->
+<!-- profile:社区成就：在此展示你的成就，或前往他人主页为其颁发成就。-->
 ## 成就
 
 -
@@ -77,5 +77,5 @@ type: member
 created_at: '2026-07-21T10:59:13Z'
 bio: 热爱电影，喜欢猫猫，钻研翻译
 specialties: 翻译、轻量的编码
-template_version: '3.2'
+template_version: '3.4'
 -->
