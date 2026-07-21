@@ -91,7 +91,7 @@ Specialties · 特长（自定义字段，可自行修改标题 · customizable 
 2. 上传图片（支持 png, jpg, gif, webp）。
    - **建议**：文件名设为 `avatar`，尺寸 500px 以上且为方形（非方形图片将被自动居中裁切）。
 
-**更新头像**：若需更换，请前往 `upload/v1/members/<你的社区用户ID>/avatar` 文件夹，替换旧文件即可。
+**更新头像**：若需更换，请前往 `https://github.com/MontageSubs/member-assets/tree/v1/members/<你的社区用户ID>/avatar` 文件夹，替换旧文件即可。
 
 ---
 
