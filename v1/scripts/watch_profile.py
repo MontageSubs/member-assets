@@ -9,6 +9,8 @@ from profile_common import (
     WARNING_START,
     clear_warning,
     write_warning,
+    existing_profiles,
+    render_readme,
 )
 
 DISPLAY_NAME_PATTERN = re.compile(
@@ -73,6 +75,7 @@ def main():
     changed = [member_dir.name for member_dir in target_members() if reconcile_member(member_dir)]
     if changed:
         print(f"reconciled: {', '.join(changed)}")
+        render_readme(existing_profiles())
     else:
         print("no changes detected")
 
