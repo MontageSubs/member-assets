@@ -18,13 +18,20 @@ Specialties · 特长（自定义字段，可自行修改标题 · customizable 
 {specialties}
 -->
 
-<table><tr><td valign="top">{avatar_html}</td><td valign="top" style="padding-left:20px;">
 
-# {display_name}
 
-{bio_line}
+<!-- profile:Do not edit code block below this line · 请勿编辑下方代码块 -->
+<table><tr><td valign="top">{avatar_html}<div style="text-align:center; margin-top:10px;">
+<a href="{add_custom_avatar}">添加自定义头像</a><br>
+<a href="{view_custom_avatar}">查看自定义头像</a>
+</div></td><td valign="top" style="padding-left:20px;">
 
-<table><tr><th align="center">GitHub</th><th align="center">Avatar Release · 头像</th><th align="center">Member ID · 用户ID</th></tr><tr><td align="center">{github_html}</td><td align="center"><a href="{view_url}" title="Avatar release page"><b>View · 查看</b></a></td><td align="center"><code>{member_id}</code></td></tr></table></td></tr></table>
+# {display_name}  
+{bio_line}  
+{specialties}<table><tr><th align="center">头像</th><th align="center">GitHub</th><th align="center">成员ID</th></tr><tr><td align="center"><a href="{view_url}" title="Avatar release page"><b>持久链接</b></a></td><td align="center">{github_html}</td><td align="center"><code>{member_id}</code></td></tr></table></td></tr></table>
+<!-- profile:Do not edit code block above this line · 请勿编辑上方代码块 -->
+
+
 
 {contributions_block}
 
@@ -36,6 +43,10 @@ Specialties · 特长（自定义字段，可自行修改标题 · customizable 
 {achievements_body}
 
 <!-- profile:achievements:end -->
+
+
+
+
 
 ---
 <!-- profile:Do not edit content below this line · 请勿编辑下方内容 -->
