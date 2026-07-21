@@ -1,12 +1,24 @@
+import re
 import yaml
 import os
 from pathlib import Path
 
 import releases
 
-TEMPLATE_VERSION = "2"
 PROFILE_AVATAR_SIZE = 96
 TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "profile.md"
+VERSION_MARKER = re.compile(r"^<!-- template:version:\s*(\S+)\s*-->\n+")
+
+
+def _load_template():
+    raw = TEMPLATE_PATH.read_text(encoding="utf-8")
+    match = VERSION_MARKER.match(raw)
+    version = match.group(1) if match else "1"
+    body = raw[match.end():] if match else raw
+    return version, body
+
+
+TEMPLATE_VERSION, _TEMPLATE_BODY = _load_template()
 
 
 class SafeDict(dict):
@@ -70,7 +82,7 @@ def build_readme(frontmatter, bio="", specialties="", community_contributions=""
         "<!-- profile:external_contributions:end -->"
     )
 
-    template_str = TEMPLATE_PATH.read_text(encoding="utf-8")
+    template_str = _TEMPLATE_BODY
 
     return template_str.format_map(SafeDict(
         display_name=display_name,
@@ -84,5 +96,7 @@ def build_readme(frontmatter, bio="", specialties="", community_contributions=""
         member_id=member_id,
         contributions_block=contributions_block,
         achievements_body=achievements_body,
-        frontmatter_yaml=frontmatter_yaml
+        frontmatter_yaml=frontmatter_yaml,
+        add_custom_avatar=releases.avatar_upload_url(member_id),
+        view_custom_avatar=releases.avatar_tree_url(member_id),
     ))

@@ -22,6 +22,14 @@ def profile_url(member_id):
     return f"https://github.com/{repo()}/tree/v1/members/{member_id}"
 
 
+def avatar_upload_url(member_id):
+    return f"https://github.com/{repo()}/upload/v1/members/{member_id}/avatar"
+
+
+def avatar_tree_url(member_id):
+    return f"https://github.com/{repo()}/tree/v1/members/{member_id}/avatar"
+
+
 def sizes_for(shape, asset_names):
     return sorted(int(name[len(shape) + 1 : -4]) for name in asset_names if name.startswith(f"{shape}-"))
 
