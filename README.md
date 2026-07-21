@@ -18,7 +18,8 @@
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-b9b72730aa57/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-b9b72730aa57) | 豆子 | `b9b72730aa57` | [查看](members/b9b72730aa57) | [EgonThorne](https://github.com/EgonThorne) |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-aa3c14ccdeec/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-aa3c14ccdeec) | Charlie | `aa3c14ccdeec` | [查看](members/aa3c14ccdeec) | [CharlieeHann](https://github.com/CharlieeHann) |
 | [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-7f57c20fc18a/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-7f57c20fc18a) | 粑粑超人 | `7f57c20fc18a` | [查看](members/7f57c20fc18a) | — |
-| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-e759d969a693/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-e759d969a693) | reoorel | `e759d969a693` | [查看](members/e759d969a693) | — |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-e759d969a693/circle-96.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-e759d969a693) | reoorel | `e759d969a693` | [查看](members/e759d969a693) | — |
+| [<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-d6be4d6fd9df/circle-32.png" width="32" alt="">](https://github.com/MontageSubs/member-assets/releases/tag/v1-d6be4d6fd9df) | NickCao | `d6be4d6fd9df` | [查看](members/d6be4d6fd9df) | [nickcao](https://github.com/nickcao) |
 <!-- members:end -->
 
 ---
