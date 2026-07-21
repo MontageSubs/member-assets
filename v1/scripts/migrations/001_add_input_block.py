@@ -59,7 +59,7 @@ def migrate(readme_path):
         specialties=frontmatter["specialties"],
         community_contributions=_section_body(sections, "community_contributions"),
         external_contributions=_section_body(sections, "external_contributions"),
-        honors_body=_section_body(sections, "honors", "（暂无）"),
+        achievements_body=_section_body(sections, "honors", "（暂无）"),
     )
     readme_path.write_text(new_text, encoding="utf-8")
     return True

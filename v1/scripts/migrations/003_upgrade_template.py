@@ -26,13 +26,18 @@ def migrate(readme_path):
 
     frontmatter["template_version"] = TEMPLATE_VERSION
 
+    old_honors = extract_section_body(text, "honors")
+    old_honors_lines = old_honors.splitlines()
+    if old_honors_lines and old_honors_lines[0].startswith("##"):
+        old_honors = "\n".join(old_honors_lines[1:]).strip()
+
     new_text = build_readme(
         frontmatter,
         bio=frontmatter.get("bio", ""),
         specialties=frontmatter.get("specialties", ""),
         community_contributions=extract_section_body(text, "community_contributions"),
         external_contributions=extract_section_body(text, "external_contributions"),
-        honors_body=extract_section_body(text, "honors") or "（暂无）",
+        achievements_body=old_honors or "（暂无）",
     )
     readme_path.write_text(new_text, encoding="utf-8")
     return True
