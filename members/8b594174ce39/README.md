@@ -1,40 +1,50 @@
-<!--
-WARNING: do not remove or reorder the marked sections below.
-Automation depends on these markers to detect and update the
-display name and GitHub link. Editing content inside a marker
-is fine; removing the markers themselves breaks automation.
+<!-- profile:input
+Edit the info below and save — it auto-renders into your profile card · 编辑下方信息并保存，将自动渲染进你的档案卡片
+
+-----
+Nickname · 昵称
+-----
+cococo
+
+-----
+GitHub — link, username, or leave empty · GitHub 用户名——可填链接、用户名，或留空
+-----
+fan-cococo
+
+-----
+Bio · 简介
+-----
+
+
+-----
+Specialties · 特长（自定义字段，可自行修改标题 · customizable title）
+-----
+
+
 -->
 
 <table>
 <tr>
 <td valign="top">
 
-<img src="https://github.com/MontageSubs/member-assets/releases/download/v1-8b594174ce39/circle-96.png" width="96" alt="Avatar of cococo">
+<a href="https://github.com/fan-cococo" title="GitHub profile"><img src="https://github.com/MontageSubs/member-assets/releases/download/v1-8b594174ce39/circle-96.png" width="96" alt="Avatar of cococo"></a>
 
 </td>
 <td valign="top" style="padding-left:20px;">
 
-<!-- profile:display_name:start -->
 # cococo
-<!-- profile:display_name:end -->
 
-**简介：** （在此填写自我介绍）
-
-**特长：** 
+No bio yet · 暂无简介
 
 <table>
 <tr>
 <th align="center">GitHub</th>
-<th align="center">头像 Release</th>
-<th align="center">社区成员ID</th>
+<th align="center">Avatar Release · 头像</th>
+<th align="center">Member ID · 用户ID</th>
 </tr>
 <tr>
-<td align="center">
-<!-- profile:github:start -->
-<a href="https://github.com/fan-cococo" title="GitHub profile"><b>GitHub</b></a>
-<!-- profile:github:end -->
-</td>
-<td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-8b594174ce39" title="Avatar release page"><b>查看</b></a></td>
+<td align="center"><a href="https://github.com/fan-cococo" title="GitHub profile"><b>GitHub</b></a></td>
+<td align="center"><a href="https://github.com/MontageSubs/member-assets/releases/tag/v1-8b594174ce39" title="Avatar release page"><b>View · 查看</b></a></td>
 <td align="center"><code>8b594174ce39</code></td>
 </tr>
 </table>
@@ -53,11 +63,13 @@ is fine; removing the markers themselves breaks automation.
 <!-- profile:external_contributions:start -->
 ## 外部贡献
 
-- 
+-
 <!-- profile:external_contributions:end -->
 
 <!-- profile:honors:start -->
-## 荣誉
+Maintained by the community team, not by yourself · 由社区管理团队维护，无需自行编辑
+
+## Honors · 荣誉
 
 （暂无）
 <!-- profile:honors:end -->
@@ -79,4 +91,6 @@ avatar_source: ''
 avatar_local: false
 type: member
 created_at: '2026-07-21T11:34:21Z'
+bio: ''
+specialties: ''
 -->
