@@ -54,13 +54,11 @@ def center_square(image):
 
 
 def circular(image):
-    # Use supersampling (4x) for anti-aliasing the circular edge
     scale = 4
     mask_size = (image.size[0] * scale, image.size[1] * scale)
     mask = Image.new("L", mask_size, 0)
     ImageDraw.Draw(mask).ellipse((0, 0, mask_size[0], mask_size[1]), fill=255)
     mask = mask.resize(image.size, Image.LANCZOS)
-    
     result = image.copy()
     result.putalpha(mask)
     return result

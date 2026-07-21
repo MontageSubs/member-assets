@@ -47,17 +47,26 @@ def default_readme():
 def render_readme(profiles):
     from releases import asset_url
 
+    import avatar_cache
+
     ordered = sorted(profiles, key=lambda p: p.get("created_at", ""))
     rows = []
     for profile in ordered:
         member_id = profile["id"]
         display_name = profile.get("display_name") or "（未命名）"
         github = profile.get("github") or ""
-        avatar_img = f'<img src="{asset_url(member_id, "circle-32.png")}" width="32" alt="">'
+        
+        cache = avatar_cache.load(member_id)
+        best_size = next((s for s in (96, 48, 32) if f"circle-{s}.png" in cache), 32)
+        
+        img_tag = f'<img src="{asset_url(member_id, f"circle-{best_size}.png")}" width="32" alt="">'
+        release_url = f"https://github.com/MontageSubs/member-assets/releases/tag/v1-{member_id}"
+        avatar_link = f"[{img_tag}]({release_url})"
+        
         profile_cell = f"[查看](members/{member_id})"
         github_cell = f"[{github}](https://github.com/{github})" if github else "—"
         id_cell = f"`{member_id}`"
-        rows.append(f"| {avatar_img} | {display_name} | {id_cell} | {profile_cell} | {github_cell} |")
+        rows.append(f"| {avatar_link} | {display_name} | {id_cell} | {profile_cell} | {github_cell} |")
     table = (
         "\n".join(["| | 昵称 | 成员 ID | 个人档案 | GitHub |", "| :---: | :--- | :--- | :--- | :--- |", *rows])
         if rows
