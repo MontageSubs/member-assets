@@ -1,4 +1,4 @@
-<!-- template:version: 3.1 -->
+<!-- template:version: 3.2 -->
 <!-- profile:input
 Edit the info below and save — it auto-renders into your profile card · 编辑下方信息并保存，将自动渲染进你的档案卡片
 -----
@@ -21,16 +21,15 @@ Specialties · 特长（自定义字段，可自行修改标题 · customizable 
 
 
 
+
 <!-- profile:Do not edit code block below this line · 请勿编辑下方代码块 -->
-<table><tr><td valign="top">{avatar_html}<div style="text-align:center; margin-top:10px;">
-<a href="{add_custom_avatar}">添加自定义头像</a><br>
-<a href="{view_custom_avatar}">查看自定义头像</a>
-</div></td><td valign="top" style="padding-left:20px;">
+<table><tr><td valign="top">{avatar_html}</td><td valign="top" style="padding-left:20px;">
 
 # {display_name}  
 {bio_line}  
-{specialties}<table><tr><th align="center">头像</th><th align="center">GitHub</th><th align="center">成员ID</th></tr><tr><td align="center"><a href="{view_url}" title="Avatar release page"><b>持久链接</b></a></td><td align="center">{github_html}</td><td align="center"><code>{member_id}</code></td></tr></table></td></tr></table>
+{specialties}<table><tr><th align="center">头像</th><th align="center">GitHub</th><th align="center">成员ID</th></tr><tr><td align="center"><a href="{view_url}" title="Avatar release page"><b>持久链接</b></a></td><td align="center">{github_html}</td><td align="center"><code>{member_id}</code></td></tr></table></td></tr></table><sub><a href="{add_custom_avatar}">添加自定义头像</a> · <a href="{view_custom_avatar}">查看自定义头像</a></sub>
 <!-- profile:Do not edit code block above this line · 请勿编辑上方代码块 -->
+
 
 
 
