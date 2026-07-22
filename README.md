@@ -50,27 +50,27 @@ member-assets 不仅仅是一个元数据数据库，它是我们每位成员在
 
 ```markdown
 <!-- profile:input
-Edit the info below and save — it auto-renders into your profile card · 编辑下方信息并保存，将自动渲染进你的档案卡片
+编辑下方信息并保存，将自动渲染进你的档案卡片
 -----
-Nickname · 昵称
+昵称
 -----
 
 [在此处填写昵称]
 
 -----
-GitHub — link, username, or leave empty · GitHub 用户名——可填链接、用户名，或留空
+GitHub 用户名 —— 可填链接、用户名，或留空
 -----
 
 [在此处填写GitHub用户名]
 
 -----
-Bio · 简介
+简介
 -----
 
 [在此处填写简介]
 
 -----
-Specialties · 特长（自定义字段，可自行修改标题 · customizable title）
+贡献领域
 -----
 
 [在此处填写特长]
